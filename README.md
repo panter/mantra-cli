@@ -106,7 +106,7 @@ on the client side, and all files of those types belong to a module.
 **Automatic update to index.js**
 
 For `action`, `collection`, `method`, and `publication`, the command automatically
-inserts `import` and `export` statements to the relevant `index.js` file.
+inserts `import` and `export` statements to the relevant `index` file.
 
 ---------------------------------------
 
@@ -129,6 +129,7 @@ customize:
 * templates
 * generateComponentTests (true)
 * generateContainerTests (true)
+* Overwrite extensions for `.js` and `.jsx` files.
 
 You may customize Mantra-CLI by editing `mantra_cli.yaml` on the root directory
 of your project. Please open an issue with suggestions for more customization.
@@ -217,6 +218,16 @@ Generate stories for Kadira Storybooks with generation of a new component.
 
 ```yaml
 storybook: true
+```
+
+### extensions
+Allows overwriting file extensions of generated files.
+Only applied for files which are used solely on the client. This excludes collections, publications and methods.
+Useful when working with React-Native or Typescript projects.
+
+```yaml
+jsxExtension: jsx
+jsExtension: js
 ```
 
 ---------------------------------------

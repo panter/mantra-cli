@@ -116,7 +116,7 @@ describe("getOutputPath", function() {
 
   it("returns a correct output path for a storybook", function() {
     let result = utils.getOutputPath(customConfig, 'storybook', 'user_list', 'core');
-    expect(result).to.equal('./client/modules/core/components/.stories/user_list.js');
+    expect(result).to.equal('./client/modules/core/components/.stories/user_list.jsx');
   });
   describe("with custom modules path", function() {
     const customConfig = {modulesPath: "foo/bar/mantra/modules"};
@@ -137,7 +137,7 @@ describe("getOutputPath", function() {
 
     it("returns a correct output path for a storybook", function() {
       let result = utils.getOutputPath(customConfig, 'storybook', 'user_list', 'core');
-      expect(result).to.equal('./foo/bar/mantra/modules/core/components/.stories/user_list.js');
+      expect(result).to.equal('./foo/bar/mantra/modules/core/components/.stories/user_list.jsx');
     });
   });
 });

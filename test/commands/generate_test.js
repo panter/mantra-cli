@@ -201,7 +201,7 @@ describe('core.components.comment_list', () => {
 
     it("generates storybook if configured", function() {
       generate('container', 'core:commentList', {}, { storybook: true });
-      expect(checkFileOrDirExists('./client/modules/core/components/.stories/comment_list.js')).to.equal(true);
+      expect(checkFileOrDirExists('./client/modules/core/components/.stories/comment_list.jsx')).to.equal(true);
     });
   });
 
@@ -283,7 +283,7 @@ describe('core.components.header_menu', () => {
 
     it("generates storybook if configured", function() {
       generate('component', 'core:commentList', {}, { storybook: true });
-      expect(checkFileOrDirExists('./client/modules/core/components/.stories/comment_list.js')).to.equal(true);
+      expect(checkFileOrDirExists('./client/modules/core/components/.stories/comment_list.jsx')).to.equal(true);
     });
   });
 
